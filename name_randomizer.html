@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Name Randomizer</title>
+	<style>
+		.names {
+			font-size: 40px;
+			font-weight: bold;
+			color: #333;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translateY(-50%);
+			margin: 20px;
+		}
+		button {
+			position: absolute;
+			text-align: center;
+			margin: auto;
+			width: 50%
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			padding: 10px 20px;
+			background-color: #00bfff;
+			border: none;
+			border-radius: 6px;
+			font-size: 20px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="names">
+		<p id="selectedName"></p>
+	</div>
+	<button onclick="randomizeName()">Randomize</button>
+
+<script>
+	function randomizeName() {
+		var names = ["Archana", "Abhijeet", "Anukrati", "Pratheusa", "Payel", "Ramya","Malini","Sri Vidya","Onkar","Sai Krishna","Sofia","Nitesh","Reuben Jacob","Sree Lekshmi","Priya","Victor","Wasim","Akshay","Kiran","Manish"];
+		var randomNumber = Math.floor(Math.random() * names.length);
+		document.getElementById("selectedName").innerHTML = names[randomNumber];
+	}
+</script>
+</body>
+</html>
+
+
+
